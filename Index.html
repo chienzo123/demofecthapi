@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link href="./Style.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3d4065abd3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="container-fluid bg-dark">
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-center">
+                        <div >
+                            <button type="button" class="btn btn-outline-danger"><h3>BusinessName</h3></button>
+                </div>
+                    <ul class="d-flex justify-content-center mb-0">
+                        <li class="fatherMenu py-3"><a class="pr-4 "  href="#">Chuyên Mục</a>
+                        <ul class="subMenu">
+                            <li><a  onclick="business()" class="" href="#" >Kinh tế - Tài Chính</a></li>
+                            <li><a  onclick="sport()" class="" href="#" >Thể thao</a></li>
+                            <li><a  onclick="technology()" class="" href="#" >Công Nghệ</a></li>
+                            <li><a  onclick="entertainment()" class="" href="#" >Giải trí</a></li>
+                            <li><a  onclick="healthy()" class="" href="#" >Sức Khỏe</a></li>
+                            <li><a  onclick="science()" class="" href="#" >Khoa học</a></li>
+                        </ul>
+                    </li >
+                        <li class="my-3"><a href="#"  data-toggle="modal" data-target=".bd-example-modal-sm">Thông tin công ty</a>
+
+                            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                  
+                                   © 2021 Copyright: Hoàng Quyết Chiến
+                                  
+                                </div>
+                              </div>
+                            </div></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <button  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fas fa-search"></i></button>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">TÌm kiếm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label" >Từ Khóa:</label>
+            <input type="text" class="form-control" id="key">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="find()">Tìm kiếm</button>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class = "loading text-center" id="load">
+      <div class = "loading-icon d-block">
+          <p><i class="fas fa-spinner fa-pulse"></i></p>
+          <p>Đang tải dữ liệu</p>
+      </div>
+  </div> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="new" >
+            
+            
+        </div>
+        </div>
+        <hr>
+        <div class="row" id="pl">
+          
+
+        </div>
+
+    </div>
+    <div class="container-fluid bg-dark">
+            <div class="row d-flex justify-content-center py-3 pb-3">
+                <section class="mb-4 ">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-facebook-f"></i
+                    ></a>
+    
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-twitter"></i
+                    ></a>
+    
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-google"></i
+                    ></a>
+    
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-instagram"></i
+                    ></a>
+    
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-discord"></i
+                    ></a>
+    
+                    <!-- Github -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-skype"></i
+                    ></a>
+                </section>
+            </div>
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center py-3 pb-3">
+                <form class="form-inline">
+                    <label style="color: red;" class="pr-3" >Đăng ký và nhận thông tin mới</label>
+                    <input type="text" class="imput mr-2" id="inlineFormInputName2" placeholder="Your Email">
+                      <button type="button" class="btn btn-outline-warning ml-2">Subcribe</button>
+                  </form>
+                </div>
+                <hr>
+            </div>
+           <div class="row d-flex justify-content-center py-3 pb-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            
+              <p class="text-white">© 2021 Copyright: Hoàng Quyết Chiến</p>
+          
+           </div>
+
+    </div>
+</body>
+<script src='./main.js'></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
